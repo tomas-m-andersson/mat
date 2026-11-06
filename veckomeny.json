@@ -1,0 +1,242 @@
+{
+  "format": 1,
+  "uppdaterad": "2026-11-04T21:43:59.576Z",
+  "vecka": [
+    "Korv med bröd",
+    "Pannkakor",
+    "Pasta med skinksås",
+    "Kyckling med currysås och ris",
+    "Tacos",
+    "Våfflor",
+    "Köttfärslimpa med potatis och sås"
+  ],
+  "las": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "ratter": {
+    "vardag": [
+      "Blodpudding med bacon och stekt ägg",
+      "Potatisbullar med bacon",
+      "Falukorv med makaroner/stuvade makaroner",
+      "Köttfärssås med spaghetti",
+      "Fiskpinnar med potatis/potatismos",
+      "Köttbullar med potatismos och gräddsås",
+      "Pasta med skinksås",
+      "Tjockpannkaka med bacon",
+      "Lax med potatis",
+      "Korvstroganoff med pasta eller ris",
+      "Kyckling med currysås och ris",
+      "Korv med bröd",
+      "Chicken nuggets med pommes eller ris"
+    ],
+    "helg": [
+      "Köttfärslimpa med potatis och sås",
+      "Pannbiff med potatis och stekt lök",
+      "Tacos",
+      "Hemgjord pizza",
+      "Pannkakor",
+      "Våfflor",
+      "Plättar"
+    ]
+  },
+  "ingredienser": {
+    "Blodpudding med bacon och stekt ägg": [
+      "500 g blodpudding",
+      "200 g bacon",
+      "4 st ägg",
+      "lingonsylt"
+    ],
+    "Chicken nuggets med pommes eller ris": [
+      "600 g kycklingnuggets",
+      "800 g pommes frites",
+      "3 dl ris",
+      "1 st gurka",
+      "ketchup",
+      "Icas sötsura sås"
+    ],
+    "Falukorv med makaroner/stuvade makaroner": [
+      "600 g falukorv",
+      "300 g makaroner",
+      "5 dl mjölk"
+    ],
+    "Fiskpinnar med potatis/potatismos": [
+      "600 g fiskpinnar",
+      "1 kg potatis eller pulvermos",
+      "250 g frysta ärtor",
+      "Remuladsås"
+    ],
+    "Hemgjord pizza": [
+      "1-2 pizzakit",
+      "180 g strimlad skinka",
+      "250 g riven ost"
+    ],
+    "Korv med bröd": [
+      "10 st korv",
+      "10 st korvbröd",
+      "ketchup",
+      "senap",
+      "rostad lök"
+    ],
+    "Korvstroganoff med pasta eller ris": [
+      "600 g falukorv",
+      "1 st gul lök",
+      "1 pkt krossade tomater",
+      "Ketchup",
+      "2 dl matlagningsgrädde",
+      "Pasta eller ris"
+    ],
+    "Kyckling med currysås och ris": [
+      "600 g kycklingfilé",
+      "1 st gul lök",
+      "2 msk currypulver",
+      "3 dl matlagningsgrädde",
+      "4 dl ris"
+    ],
+    "Köttbullar med potatismos och gräddsås": [
+      "Köttbullar",
+      "1 kg potatis eller pulvermos",
+      "2 dl matlagningsgrädde",
+      "2 dl mjölk",
+      "1 st buljongtärning",
+      "lingonsylt"
+    ],
+    "Köttfärslimpa med potatis och sås": [
+      "800 g köttfärs",
+      "2 dl crème fraiche",
+      "2 påsar fransk löksoppa",
+      "lingonsylt",
+      "Potatis",
+      "1-2 gula lökar",
+      "matlagningsgrädde"
+    ],
+    "Köttfärssås med spaghetti": [
+      "500 g köttfärs",
+      "400 g spaghetti",
+      "1 pkt krossade tomater",
+      "1 st gul lök",
+      "1 pkt krossade tomater",
+      "1 köttbuljongtärning"
+    ],
+    "Lax med potatis": [
+      "500 g laxfilé",
+      "1 kg potatis",
+      "1 st citron",
+      "2 dl crème fraiche"
+    ],
+    "Pannbiff med potatis och stekt lök": [
+      "500 g köttfärs",
+      "1 st ägg",
+      "1 dl ströbröd",
+      "1 dl mjölk",
+      "3 st gul lök",
+      "1 kg potatis",
+      "2 msk smör",
+      "lingonsylt"
+    ],
+    "Pannkakor": [
+      "3 dl vetemjöl",
+      "6 dl mjölk",
+      "3 st ägg",
+      "2 msk smör",
+      "Sylt",
+      "Vispgrädde"
+    ],
+    "Pasta med skinksås": [
+      "300 g pasta",
+      "180 g strimlad skinka",
+      "2 dl matlagningsgrädde",
+      "100 g riven ost"
+    ],
+    "Plättar": [
+      "3 dl vetemjöl",
+      "6 dl mjölk",
+      "3 st ägg",
+      "2 msk smör",
+      "sylt"
+    ],
+    "Potatisbullar med bacon": [
+      "800 g potatisbullar",
+      "1-2 pkt bacon",
+      "lingonsylt"
+    ],
+    "Tacos": [
+      "500 g köttfärs",
+      "1 förp tacokrydda",
+      "1 förp tacoskal",
+      "1 förp mjuka tacobröd",
+      "1 burk salsa",
+      "1 st gurka",
+      "1 paprika",
+      "3 st tomat",
+      "1 burk majs",
+      "150 g riven ost",
+      "2 dl crème fraiche",
+      "Salta jordnötter"
+    ],
+    "Tjockpannkaka med bacon": [
+      "3 dl vetemjöl",
+      "6 dl mjölk",
+      "3 st ägg",
+      "1 pkt bacon",
+      "lingonsylt"
+    ],
+    "Våfflor": [
+      "3 dl vetemjöl",
+      "4 dl mjölk",
+      "2 st ägg",
+      "100 g smör",
+      "2 dl vispgrädde",
+      "sylt"
+    ]
+  },
+  "inkop": {
+    "egna": [],
+    "andrad": {},
+    "borta": [
+      "|1-2 gula lökar",
+      "v|crème fraiche",
+      "msk|currypulver",
+      "|gul lök",
+      "|gurka",
+      "|ketchup",
+      "|korv",
+      "|korvbröd",
+      "m|kycklingfilé",
+      "m|köttfärs",
+      "|lingonsylt",
+      "burk|majs",
+      "v|matlagningsgrädde",
+      "|matlagningsgrädde",
+      "förp|mjuka tacobröd",
+      "v|mjölk",
+      "|paprika",
+      "m|pasta",
+      "|potatis",
+      "|påsar fransk löksoppa",
+      "v|ris",
+      "m|riven ost",
+      "|rostad lök",
+      "burk|salsa",
+      "|salta jordnötter",
+      "|senap",
+      "msk|smör",
+      "m|smör",
+      "m|strimlad skinka",
+      "|sylt",
+      "förp|tacokrydda",
+      "förp|tacoskal",
+      "|tomat",
+      "v|vetemjöl",
+      "v|vispgrädde",
+      "|vispgrädde",
+      "|ägg"
+    ],
+    "ordning": []
+  }
+}
