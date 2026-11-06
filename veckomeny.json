@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-04T21:43:59.576Z",
+  "uppdaterad": "2026-11-06T10:35:30.083Z",
   "vecka": [
     "Korv med bröd",
     "Pannkakor",
@@ -196,7 +196,20 @@
     ]
   },
   "inkop": {
-    "egna": [],
+    "egna": [
+      {
+        "id": "emw4u943p7oak",
+        "text": "Mjölk"
+      },
+      {
+        "id": "emw4u95ym7iaj",
+        "text": "Bröd"
+      },
+      {
+        "id": "emw4u96pzevb3",
+        "text": "Ost"
+      }
+    ],
     "andrad": {},
     "borta": [
       "|1-2 gula lökar",
