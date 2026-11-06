@@ -12,6 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Mat">
 <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();window.__instPrompt=e;document.dispatchEvent(new Event("instprompt"))});window.addEventListener("appinstalled",function(){window.__instPrompt=null;document.dispatchEvent(new Event("instprompt"))});</script>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 --bg:#e8f2fb;--card:#ffffff;--ink:#1a2433;--mut:#5a6b80;--line:#cfdcea;--acc:#2563d6;--accink:#ffffff;--helg:#ffd84d;--helgink:#3a2c00;--note:#fdf8e8;--noteink:#3a3320;--danger:#b4232a}
@@ -465,24 +466,9 @@ body.harspar .inst-main{padding-bottom:110px}
 <section class="meny" id="vm-meny" hidden aria-label="Meny">
 <h2>Utseende</h2>
 <div class="hjalp"><button id="vm-theme" type="button"></button><span id="vm-theme-text"></span></div>
-<h2>GitHub – gemensamt för hela appen</h2>
-<p class="hint">Veckomeny, inköpslista och recept sparas i samma repo (filerna veckomeny.json och recept.js) och använder samma token. Skapa en "fine-grained personal access token" på github.com (Settings, Developer settings), välj bara det här repot och ge den behörigheten Contents: Read and write.</p>
-<label for="dg-agare">Användarnamn på GitHub</label>
-<input type="text" id="dg-agare" autocomplete="off" autocapitalize="off" spellcheck="false">
-<label for="dg-repo">Repo</label>
-<input type="text" id="dg-repo" autocomplete="off" autocapitalize="off" spellcheck="false">
-<label for="dg-gren">Branch</label>
-<input type="text" id="dg-gren" autocomplete="off" autocapitalize="off" spellcheck="false">
-<label for="dg-token">Token</label>
-<input type="password" id="dg-token" autocomplete="off" autocapitalize="off" spellcheck="false">
-<label class="kryss"><input type="checkbox" id="dg-kom" checked> Kom ihåg token på den här enheten</label>
-<p class="hint">Token sparas bara i webbläsaren på den här enheten, aldrig i repot. Den som har token kan ändra filerna i repot, så dela den inte.</p>
-<div class="atgarder">
-<button class="main" id="dg-spara" type="button">Spara inställningar</button>
-<button id="dg-glom" type="button">Ta bort token</button>
-</div>
-<p class="menystatus" id="dg-st-vm" role="status"></p>
-<p class="menystatus" id="dg-st-rc" role="status"></p>
+<h2>Spara som app</h2>
+<p class="hint" id="app-text"></p>
+<div class="val"><button class="main" id="app-installera" type="button" hidden>Spara som app</button></div>
 <h2>Veckomeny – rätter</h2>
 <div class="val"><button id="edopen" type="button">Redigera rätter</button></div>
 <h2>Veckomeny – sparande</h2>
@@ -554,6 +540,25 @@ body.harspar .inst-main{padding-bottom:110px}
 <div class="hjalp"><button id="info" type="button" aria-expanded="false" aria-controls="infotext"></button><span>Så fungerar sparandet</span></div>
 <p class="hjalptext" id="infotext" hidden>Recepten sparas i filen recept.js, inte i webbläsaren. Öppna menyn (kugghjulet uppe till höger) för att välja ljust eller mörkt läge och för att spara recepten. På mobilen fyller du i dina uppgifter under Spara till GitHub, så sparas varje ändring direkt i recept.js i ditt repo. På datorn i Chrome eller Edge kan du i stället koppla recept.js. Du kan alltid ladda ner recept.js och ersätta filen själv. Med portionsknapparna räknas mängderna om.</p>
 <div hidden><div class="hjalp"><button id="theme" type="button"></button><span id="theme-text"></span></div></div></section></div>
+<div class="app-vm"><section class="meny" id="delat-panel"><h2>GitHub – gemensamt för hela appen</h2>
+<p class="hint">Veckomeny, inköpslista och recept sparas i samma repo (filerna veckomeny.json och recept.js) och använder samma token. Skapa en "fine-grained personal access token" på github.com (Settings, Developer settings), välj bara det här repot och ge den behörigheten Contents: Read and write.</p>
+<label for="dg-agare">Användarnamn på GitHub</label>
+<input type="text" id="dg-agare" autocomplete="off" autocapitalize="off" spellcheck="false">
+<label for="dg-repo">Repo</label>
+<input type="text" id="dg-repo" autocomplete="off" autocapitalize="off" spellcheck="false">
+<label for="dg-gren">Branch</label>
+<input type="text" id="dg-gren" autocomplete="off" autocapitalize="off" spellcheck="false">
+<label for="dg-token">Token</label>
+<input type="password" id="dg-token" autocomplete="off" autocapitalize="off" spellcheck="false">
+<label class="kryss"><input type="checkbox" id="dg-kom" checked> Kom ihåg token på den här enheten</label>
+<p class="hint">Token sparas bara i webbläsaren på den här enheten, aldrig i repot. Den som har token kan ändra filerna i repot, så dela den inte.</p>
+<div class="atgarder">
+<button class="main" id="dg-spara" type="button">Spara inställningar</button>
+<button id="dg-glom" type="button">Ta bort token</button>
+</div>
+<p class="menystatus" id="dg-st-vm" role="status"></p>
+<p class="menystatus" id="dg-st-rc" role="status"></p>
+</section></div>
 </div>
 </div>
 <div class="app-rc" id="app-rc">
@@ -608,9 +613,9 @@ const kind=i=>i>=4?"helg":"vardag";
 
 /* ===== Data och GitHub ===== */
 function standardKonf(){
-  let agare="tomas-m-andersson",repo="veckomeny";
+  let agare="tomas-m-andersson",repo="Mat";
   const m=location.hostname.match(/^([^.]+)\.github\.io$/i);
-  if(m){agare=m[1];const p=location.pathname.split("/").filter(Boolean)[0];if(p&&p.indexOf(".")<0)repo=p}
+  if(m){agare=m[1]}
   return{agare:agare,repo:repo,gren:"main",fil:"veckomeny.json"};
 }
 const KEY={cfg:"gh",token:"ghtoken",cache:"cache",utkast:"utkast"};
@@ -1504,10 +1509,7 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
   var data = window.RECEPT_DATA && Array.isArray(window.RECEPT_DATA.recept) ? window.RECEPT_DATA : { recept: [] };
   if (!data.github) {
     var gm = location.hostname.match(/^([^.]+)\.github\.io$/i);
-    if (gm) {
-      var gp = location.pathname.split("/").filter(Boolean)[0];
-      data.github = { agare: gm[1], repo: gp && gp.indexOf(".") < 0 ? gp : gm[1] + ".github.io", gren: "main", fil: "recept.js" };
-    }
+    data.github = { agare: gm ? gm[1] : "tomas-m-andersson", repo: "Mat", gren: "main", fil: "recept.js" };
   }
   var valtId = null;
   var filter = { q: "", kat: "Alla" };
@@ -2846,6 +2848,31 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
     else if (a === "nyttrecept") gaTill("recept", function () { $("nyttKnapp").click(); });
     else if (a === "annat") { insp = valjInsp(insp); renderaHem(); }
   });
+
+  /* ---------- Spara som app ---------- */
+  function arInstallerad() { return (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true; }
+  function uppdateraApp() {
+    var b = $("app-installera"), t = $("app-text");
+    if (arInstallerad()) { b.hidden = true; t.textContent = "Du använder redan Mat som app."; return; }
+    if (window.__instPrompt) {
+      b.hidden = false;
+      t.textContent = "Lägg Mat på hemskärmen eller i programlistan så öppnas den som en vanlig app, utan webbläsarens adressfält.";
+      return;
+    }
+    b.hidden = true;
+    var ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    t.textContent = ios
+      ? "På iPhone och iPad: tryck på Dela-ikonen (fyrkanten med pilen) i Safari och välj Lägg till på hemskärmen."
+      : "Öppna webbläsarens meny och välj Installera app eller Lägg till på startskärmen. Visas inget sådant val kan webbläsaren sakna stöd för det.";
+  }
+  $("app-installera").onclick = function () {
+    var p = window.__instPrompt;
+    if (!p) return;
+    p.prompt();
+    Promise.resolve(p.userChoice).then(function () { window.__instPrompt = null; uppdateraApp(); });
+  };
+  document.addEventListener("instprompt", uppdateraApp);
+  uppdateraApp();
 
   /* ---------- Flikbyte ---------- */
   function visa(t) {
