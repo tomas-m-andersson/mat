@@ -1216,5 +1216,11 @@ window.RECEPT_DATA = {
     "Övrigt": 2,
     "Drinkar": 4
   },
-  "perSida": 15
+  "perSida": 15,
+  "github": {
+    "agare": "tomas-m-andersson",
+    "repo": "mat",
+    "gren": "main",
+    "fil": "recept.js"
+  }
 };
