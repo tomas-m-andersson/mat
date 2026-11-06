@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-06T18:06:20.626Z",
+  "uppdaterad": "2026-11-06T18:06:31.372Z",
   "vecka": [
     "Korv med bröd",
     "Pannkakor",
@@ -340,6 +340,26 @@
       {
         "id": "emw5acyovc0lh",
         "text": "5 ägg"
+      },
+      {
+        "id": "emw5ad7am375u",
+        "text": "1 dl havregryn"
+      },
+      {
+        "id": "emw5ad7amlxyq",
+        "text": "1 msk kaffe eller vatten"
+      },
+      {
+        "id": "emw5ad7amcp3z",
+        "text": "2 msk kakao"
+      },
+      {
+        "id": "emw5ad7amnir6",
+        "text": "pärlsocker att rulla i"
+      },
+      {
+        "id": "emw5ad7am5gzu",
+        "text": "1 dl socker"
       }
     ],
     "andrad": {},
