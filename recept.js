@@ -1219,7 +1219,7 @@ window.RECEPT_DATA = {
   "perSida": 15,
   "github": {
     "agare": "tomas-m-andersson",
-    "repo": "mat",
+    "repo": "Mat",
     "gren": "main",
     "fil": "recept.js"
   }
