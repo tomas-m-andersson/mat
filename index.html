@@ -379,9 +379,12 @@ body.harspar .app-vm main{padding-bottom:110px}
 .hem-ruta .hem-stor{font-size:1.5rem;font-weight:800;line-height:1}
 .hem-prog{display:block;height:8px;border-radius:999px;background:var(--line);overflow:hidden}
 .hem-prog>span{display:block;height:100%;border-radius:999px;background:var(--acc)}
-.hem-prickar{display:flex;gap:5px;flex-wrap:wrap}
-.hem-prickar span{width:14px;height:14px;border-radius:50%;display:block}
-.hem-prickar span.idag{outline:2px solid var(--ink);outline-offset:2px}
+.hem-prickar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:2px 0}
+.hem-prickar span{aspect-ratio:1;border-radius:50%;display:block}
+.hem-prickar svg{width:100%;height:100%;display:block}
+.hem-prickar text{font:800 11px ui-rounded,"SF Pro Rounded",Nunito,"Segoe UI",system-ui,sans-serif;fill:#fff;text-anchor:middle}
+.hem-prickar span:nth-child(3) text{fill:#2b2200}
+.hem-prickar span.idag{outline:2px solid var(--ink);outline-offset:1px}
 .hem-snabb{display:flex;gap:8px;flex-wrap:wrap}
 .hem-chip{height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--card);box-shadow:0 2px 0 var(--line);color:var(--ink);font-weight:700;font-size:.9rem;display:flex;align-items:center;gap:8px;cursor:pointer}
 .hem-chip svg{width:20px;height:20px;color:var(--acc);flex:none}
@@ -2819,7 +2822,7 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
         '<span class="hem-prog" aria-hidden="true"><span style="width:' + (tot ? Math.round(klara / tot * 100) : 0) + '%"></span></span>' +
         '<span class="hem-sub">' + (tot ? klara + " av " + tot + " klara" : "Inget på listan ännu") + "</span></button>" +
       '<button type="button" class="hem-ruta" data-hem="meny"><span class="hem-sub">Veckomeny</span><span class="hem-stor">' + (last ? "Låst" : "Inte låst") + "</span>" +
-        '<span class="hem-prickar" aria-hidden="true">' + FARG.map(function (c, j) { return '<span style="background:' + c + '"' + (j === i ? ' class="idag"' : "") + "></span>"; }).join("") + "</span>" +
+        '<span class="hem-prickar" aria-hidden="true">' + FARG.map(function (c, j) { return '<span style="background:' + c + '"' + (j === i ? ' class="idag"' : "") + "><svg viewBox=\"0 0 20 20\"><text x=\"10\" y=\"13.9\">" + KORT[j].charAt(0) + "</text></svg></span>"; }).join("") + "</span>" +
         '<span class="hem-sub">' + (week ? "Imorgon: " + esc(week[imorgonI]) : "") + "</span></button></div>";
     // Snabbval
     h += '<h2 class="hem-rub">Snabbval</h2><div class="hem-snabb">' +
