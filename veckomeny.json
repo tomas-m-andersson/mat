@@ -1,13 +1,13 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-06T20:07:01.830Z",
+  "uppdaterad": "2026-11-06T20:07:06.595Z",
   "vecka": [
     "Korv med bröd",
     "Pannkakor",
     "Pasta med skinksås",
     "Kyckling med currysås och ris",
     "Tacos",
-    "Våfflor",
+    "Pizza",
     "Köttfärslimpa med potatis och sås"
   ],
   "las": [
@@ -16,7 +16,7 @@
     true,
     true,
     true,
-    false,
+    true,
     true
   ],
   "ratter": {
