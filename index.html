@@ -362,7 +362,7 @@ body.harspar .app-vm main{padding-bottom:110px}
 .hem .appcog{width:44px;height:44px;padding:0;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font:inherit}
 .hem .appcog svg{width:22px;height:22px}
 .hem button{font:inherit}
-.hem-dag{margin:26px 0 0;font-size:.92rem;font-weight:700;color:var(--mut)}
+.hem-dag{margin:26px 0 16px;font-size:.92rem;font-weight:700;color:var(--mut)}
 .hem h1{margin:2px 0 18px;font-size:clamp(2rem,9vw,2.6rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--acc)}
 .hem h2.hem-rub{margin:40px 4px 12px;font-size:.95rem;font-weight:800}
 .hem-kort{background:var(--card);border-radius:24px;box-shadow:0 2px 0 var(--line);padding:18px 20px;margin:0 0 14px}
@@ -370,7 +370,8 @@ body.harspar .app-vm main{padding-bottom:110px}
 .hem-rad{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .hem-badge{padding:4px 10px;border-radius:999px;background:var(--helg);color:var(--helgink);font-size:.75rem;font-weight:800}
 .hem-sub{font-size:.82rem;font-weight:700;color:var(--mut)}
-.hem-ratt{font-size:clamp(1.6rem,7vw,1.9rem);font-weight:800;line-height:1.15;overflow-wrap:anywhere}
+.hem-ratt b{font-weight:800}
+.hem-ratt{font-size:clamp(1.4rem,6.2vw,1.65rem);font-weight:600;line-height:1.15;overflow-wrap:anywhere}
 .hem-knapp{height:44px;padding:0 18px;border-radius:999px;border:2px solid #8fa3b8;border-color:color-mix(in srgb,var(--ink) 38%,var(--card));background:var(--card);color:var(--ink);font-weight:700;font-size:.95rem;cursor:pointer}
 .hem-knapp.main{background:var(--acc);color:var(--accink);border-color:var(--acc);font-weight:800}
 .hem-rutor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 4px}
@@ -2805,11 +2806,10 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
     var receptId = ratt && window.__rc ? window.__rc.hitta(ratt) : null;
     var tot = st ? st.kort.length : 0, klara = st ? st.kort.filter(function (k) { return st.checked.indexOf(k) > -1; }).length : 0;
     var kvar = tot - klara, last = !!(st && st.locks.every(Boolean));
-    var h = '<p class="hem-dag">' + esc(datum) + '</p><h1>Vad blir det ikväll?</h1>';
+    var h = '<p class="hem-dag">' + esc(datum) + '</p>';
     // Ikväll
-    h += '<section class="hem-kort hem-ikvall" aria-label="Middag ikväll"><div class="hem-rad">' +
-      (i >= 4 ? '<span class="hem-badge">helgrätt</span>' : "") + '<span class="hem-sub">' + DAGAR[i] + "</span></div>" +
-      '<div class="hem-ratt">' + (week ? esc(ratt) : "Hämtar veckomenyn…") + "</div>" +
+    h += '<section class="hem-kort hem-ikvall" aria-label="Middag ikväll">' +
+      '<div class="hem-ratt">' + (ratt ? 'I kväll blir det <b>' + esc(ratt) + '</b> till middag' : (week ? "Ingen middag vald för ikväll" : "Hämtar veckomenyn…")) + "</div>" +
       '<div class="hem-rad">' + (receptId ? '<button type="button" class="hem-knapp main" data-hem="receptidag" data-id="' + esc(receptId) + '">Öppna receptet</button>' : "") +
       '<button type="button" class="hem-knapp' + (receptId ? "" : " main") + '" data-hem="meny">Hela veckan</button></div></section>';
     // Inköp + veckomeny
