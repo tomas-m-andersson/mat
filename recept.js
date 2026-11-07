@@ -1231,6 +1231,39 @@ window.RECEPT_DATA = {
         "Vänd ner majs och paprika och låt koka ytterligare 10 minuter."
       ],
       "anteckning": ""
+    },
+    {
+      "id": "3cb684f4-ce69-4751-b8de-5727a3469998",
+      "titel": "Tunnbröd-stöpa (deg)",
+      "kategori": "Bakning",
+      "portioner": 15,
+      "enhet": "tunnbrödskakor",
+      "tid": "",
+      "taggar": [
+        "bröd",
+        "jul"
+      ],
+      "favorit": false,
+      "ingredienser": [
+        "100 smör",
+        "1 liter mjölk (röd)",
+        "1 pkt jäst",
+        "1 tsk salt",
+        "1 msk anis",
+        "1 msk fänkål",
+        "1 dl brödsirap eller mörk sirap",
+        "500g vetemjöl",
+        "500g rågsikt"
+      ],
+      "steg": [
+        "Ta fram mjölken och låt stå till rumstemperatur.",
+        "Smält smöret, och låt svalna till rumstemperatur.",
+        "Blanda mjöl, rågsikt, salt och kryddor i en hink.",
+        "Smula ner och rör ut jästen i mjölken.",
+        "Häll ner mjölken, smöret och sirapen i hinken, och rör ordentligt med en träslev.",
+        "Låt stå och jästa med lock i 1-2 timmar."
+      ],
+      "anteckning": ""
     }
   ],
   "tema": "dark",
