@@ -1199,6 +1199,38 @@ window.RECEPT_DATA = {
       ],
       "anteckning": "",
       "bild": "bilder/e3489c18-6982-4616-b684-aa2b60a86ba0-mvpfzolm.jpg"
+    },
+    {
+      "id": "9a5aaff4-b0b8-40b4-af6a-5e79fede8243",
+      "titel": "Cowboysoppa",
+      "kategori": "Middag",
+      "portioner": 4,
+      "tid": "20-30 min",
+      "favorit": false,
+      "ingredienser": [
+        "500 g färs",
+        "1 gul lök, hackad",
+        "3 vitlöksklyftor, hackade eller pressade",
+        "0,5 dl tomatpuré",
+        "6 dl vatten",
+        "2 msk koncentrerad kalvfond",
+        "1 dl chilisås",
+        "3 dl grädde, gärna vispgrädde",
+        "500 g skalad och tärnad potatis",
+        "1 paprika, tärnad",
+        "1 liten burk majs",
+        "Salt & peppar",
+        "1 msk torkad oregano"
+      ],
+      "steg": [
+        "Stek färs med lök, vitlök och tomatpurén tills det får fin färg.",
+        "Krydda med salt, peppar och oregano.",
+        "Tillsätt vatten, fond, chilisås, grädde och potatisen.",
+        "Rör ihop och låt soppan koka på svag värme under lock i ungefär 15 minuter.",
+        "Smaka av och smaka ev. upp med mer salt, peppar, chilisås eller fond.",
+        "Vänd ner majs och paprika och låt koka ytterligare 10 minuter."
+      ],
+      "anteckning": ""
     }
   ],
   "tema": "dark",
