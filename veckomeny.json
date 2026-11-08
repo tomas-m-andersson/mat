@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-08T19:16:58.310Z",
+  "uppdaterad": "2026-11-08T19:18:23.915Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -196,7 +196,44 @@
     ]
   },
   "inkop": {
-    "egna": [],
+    "egna": [
+      {
+        "id": "emw87tc4vmuso",
+        "text": "1,2 kg falukorv"
+      },
+      {
+        "id": "emw87tc4v0xkv",
+        "text": "1 gul lök"
+      },
+      {
+        "id": "emw87tc4vwez6",
+        "text": "10 korv"
+      },
+      {
+        "id": "emw87tc4v689k",
+        "text": "10 korvbröd"
+      },
+      {
+        "id": "emw87tc4vic5e",
+        "text": "1 pkt krossade tomater"
+      },
+      {
+        "id": "emw87tc4vebz5",
+        "text": "600 g kycklingnuggets"
+      },
+      {
+        "id": "emw87tc4vbnul",
+        "text": "4 dl matlagningsgrädde"
+      },
+      {
+        "id": "emw87tc4vsge8",
+        "text": "800 g pommes frites"
+      },
+      {
+        "id": "emw87tc4vmf4t",
+        "text": "3 dl vetemjöl"
+      }
+    ],
     "andrad": {},
     "borta": [
       "|1-2 gula lökar",
