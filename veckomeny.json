@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-08T19:18:38.457Z",
+  "uppdaterad": "2026-11-08T19:18:49.864Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -240,6 +240,10 @@
       {
         "id": "emw87tnhscev1",
         "text": "Mjölk"
+      },
+      {
+        "id": "emw87tw5xdbhd",
+        "text": "Havredryck"
       }
     ],
     "andrad": {},
