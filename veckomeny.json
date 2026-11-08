@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-08T15:00:20.006Z",
+  "uppdaterad": "2026-11-08T15:00:55.563Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Chicken nuggets med pommes eller ris",
@@ -17,7 +17,7 @@
     false,
     false,
     true,
-    false
+    true
   ],
   "ratter": {
     "vardag": [
