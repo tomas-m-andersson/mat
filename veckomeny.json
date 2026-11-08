@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-08T14:57:31.283Z",
+  "uppdaterad": "2026-11-08T14:57:36.889Z",
   "vecka": [
     "Korv med bröd",
     "Pannkakor",
@@ -12,7 +12,7 @@
   ],
   "las": [
     false,
-    true,
+    false,
     true,
     true,
     true,
