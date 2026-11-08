@@ -1,10 +1,10 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-08T14:57:46.421Z",
+  "uppdaterad": "2026-11-08T14:57:55.394Z",
   "vecka": [
     "Potatisbullar med bacon",
     "Chicken nuggets med pommes eller ris",
-    "Pasta med skinksås",
+    "Falukorv med makaroner/stuvade makaroner",
     "Kyckling med currysås och ris",
     "Tacos",
     "Pizza",
@@ -13,7 +13,7 @@
   "las": [
     false,
     false,
-    true,
+    false,
     true,
     true,
     true,
