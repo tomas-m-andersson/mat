@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-08T14:58:12.022Z",
+  "uppdaterad": "2026-11-08T14:58:20.007Z",
   "vecka": [
     "Potatisbullar med bacon",
     "Chicken nuggets med pommes eller ris",
@@ -15,7 +15,7 @@
     false,
     false,
     false,
-    true,
+    false,
     true,
     true
   ],
