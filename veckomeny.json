@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-10T15:43:26.598Z",
+  "uppdaterad": "2026-11-10T17:29:19.994Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -196,124 +196,34 @@
     ]
   },
   "inkop": {
-    "egna": [
-      {
-        "id": "emw87tc4vmuso",
-        "text": "1,2 kg falukorv"
-      },
-      {
-        "id": "emw87tc4v0xkv",
-        "text": "1 gul lök"
-      },
-      {
-        "id": "emw87tc4vwez6",
-        "text": "10 korv"
-      },
-      {
-        "id": "emw87tc4v689k",
-        "text": "10 korvbröd"
-      },
-      {
-        "id": "emw87tc4vic5e",
-        "text": "1 pkt krossade tomater"
-      },
-      {
-        "id": "emw87tc4vebz5",
-        "text": "600 g kycklingnuggets"
-      },
-      {
-        "id": "emw87tc4vbnul",
-        "text": "4 dl matlagningsgrädde"
-      },
-      {
-        "id": "emw87tc4vsge8",
-        "text": "800 g pommes frites"
-      },
-      {
-        "id": "emw87tw5xdbhd",
-        "text": "Havredryck"
-      },
-      {
-        "id": "emwauijv0l3ou",
-        "text": "Leverpastej"
-      },
-      {
-        "id": "emwauip6ex7we",
-        "text": "Ketchup"
-      },
-      {
-        "id": "emwauiupafspi",
-        "text": "Smörgåsskinka"
-      },
-      {
-        "id": "emwauj1v4qyv8",
-        "text": "Bröd"
-      },
-      {
-        "id": "emwauj3c7ak5j",
-        "text": "Ost"
-      },
-      {
-        "id": "emwauj5oon9xp",
-        "text": "Äpplen"
-      }
-    ],
+    "egna": [],
     "andrad": {},
     "borta": [
-      "|1-2 gula lökar",
-      "v|crème fraiche",
-      "msk|currypulver",
+      "pkt|bacon",
+      "|buljongtärning",
+      "m|falukorv",
       "|gul lök",
       "|gurka",
+      "|icas sötsura sås",
       "|ketchup",
       "|korv",
       "|korvbröd",
-      "m|kycklingfilé",
-      "m|köttfärs",
+      "pkt|krossade tomater",
+      "m|kycklingnuggets",
+      "|köttbullar",
       "|lingonsylt",
-      "burk|majs",
+      "m|makaroner",
       "v|matlagningsgrädde",
-      "|matlagningsgrädde",
-      "förp|mjuka tacobröd",
       "v|mjölk",
-      "|paprika",
-      "m|pasta",
-      "|potatis",
-      "|påsar fransk löksoppa",
+      "|pasta eller ris",
+      "m|pommes frites",
+      "m|potatis eller pulvermos",
       "v|ris",
-      "m|riven ost",
       "|rostad lök",
-      "burk|salsa",
-      "|salta jordnötter",
       "|senap",
-      "msk|smör",
-      "m|smör",
-      "m|strimlad skinka",
-      "|sylt",
-      "förp|tacokrydda",
-      "förp|tacoskal",
-      "|tomat",
       "v|vetemjöl",
-      "v|vispgrädde",
-      "|vispgrädde",
       "|ägg"
     ],
-    "ordning": [
-      "emw87tc4v689k",
-      "emw87tc4vic5e",
-      "emwauip6ex7we",
-      "emw87tc4vebz5",
-      "emw87tc4vsge8",
-      "emw87tc4v0xkv",
-      "emwauj5oon9xp",
-      "emw87tc4vwez6",
-      "emw87tc4vbnul",
-      "emw87tw5xdbhd",
-      "emw87tc4vmuso",
-      "emwauijv0l3ou",
-      "emwauiupafspi",
-      "emwauj1v4qyv8",
-      "emwauj3c7ak5j"
-    ]
+    "ordning": []
   }
 }
