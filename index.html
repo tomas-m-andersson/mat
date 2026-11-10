@@ -1247,7 +1247,9 @@ function shopCards(){
   const pos=id=>{const i=inkop.ordning.indexOf(id);return i<0?1e6:i};
   cards.forEach((c,i)=>{c.i=i});
   cards.sort((a,b)=>pos(a.id)-pos(b.id)||a.i-b.i);
-  return{cards:cards,missing:r.missing};
+  /* avbockade varor hamnar längst ner, i samma inbördes ordning */
+  const klara=cards.filter(c=>checked.includes(c.id));
+  return{cards:cards.filter(c=>!checked.includes(c.id)).concat(klara),missing:r.missing};
 }
 function shopText(){return"Inköpslista\n"+shopCards().cards.map(c=>"- "+c.text).join("\n")}
 function pruneInkop(){
@@ -1256,7 +1258,7 @@ function pruneInkop(){
   inkop.borta=inkop.borta.filter(k=>keys.includes(k));
   inkop.ordning=inkop.ordning.filter(k=>ids.includes(k));
 }
-let shopEdit=null;
+let shopEdit=null,bockTimer=0;
 function sparaOrdning(ids){inkop.ordning=ids;touch();renderShop()}
 function andraKort(c,text){
   text=text.trim().slice(0,200);shopEdit=null;
@@ -1307,7 +1309,16 @@ function renderShop(){
     };
     const cb=document.createElement("input");cb.type="checkbox";cb.checked=checked.includes(c.id);
     cb.setAttribute("aria-label","Bocka av "+c.text);
-    cb.onchange=()=>{checked=cb.checked?checked.concat(c.id):checked.filter(x=>x!==c.id);save("checked",checked);k.classList.toggle("done",cb.checked)};
+    cb.onchange=()=>{
+      checked=cb.checked?checked.concat(c.id):checked.filter(x=>x!==c.id);save("checked",checked);k.classList.toggle("done",cb.checked);
+      /* vänta en kort stund så att man ser bocken, flytta sedan varan */
+      clearTimeout(bockTimer);
+      bockTimer=setTimeout(()=>{
+        renderShop();
+        const nk=[...$("shoplist").children].find(x=>x.dataset.id===c.id);
+        const ncb=nk&&nk.querySelector("input[type=checkbox]");if(ncb)ncb.focus({preventScroll:true});
+      },350);
+    };
     const pq=parseIng(c.text);
     let t;
     if(shopEdit===c.id){
