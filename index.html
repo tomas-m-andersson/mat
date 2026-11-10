@@ -278,6 +278,8 @@ body.harspar .app-vm main{padding-bottom:110px}
 .app-rc .ingrad:last-child{border-bottom:0}
 .app-rc .ingdel{margin:18px 0 2px;font-size:1.05rem;font-weight:700;color:var(--acc)}
 .app-rc .ingdel:first-child{margin-top:4px}
+.app-rc .katnyfalt{margin-top:8px}
+.app-rc .katnyfalt[hidden]{display:none}
 .app-rc select{width:100%;font:inherit;font-size:1rem;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:14px;padding:10px 14px;display:block}
 .app-rc .ingrad input{width:22px;height:22px;accent-color:var(--acc);flex:none;margin:0}
 .app-rc .ingrad input:checked + span{text-decoration:line-through;color:var(--mut)}
@@ -2156,13 +2158,18 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
     var ny = redigerar === "ny";
     nyBild = null; taBortBild = false;
     var r = ny ? { titel: "", kategori: "", portioner: 4, tid: "", favorit: false, ingredienser: [], steg: [], anteckning: "", taggar: [] } : hitta(redigerar);
-    var alt = kategorier().map(function (k) { return '<option value="' + esc(k) + '">'; }).join("");
+    var katLista = kategorier();
+    if (r.kategori && katLista.indexOf(r.kategori) < 0) katLista = katLista.concat(r.kategori);
+    var alt = '<option value=""' + (r.kategori ? "" : " selected") + '>– Ingen kategori –</option>' +
+      katLista.map(function (k) { return '<option value="' + esc(k) + '"' + (k === r.kategori ? " selected" : "") + ">" + esc(k) + "</option>"; }).join("") +
+      '<option value="__ny__">+ Ny kategori…</option>';
     $("vy").innerHTML =
       '<form class="formular" id="formular" novalidate>' +
       "<h2>" + (ny ? "Nytt recept" : "Redigera recept") + "</h2>" +
       '<label for="f-titel">Namn</label><input type="text" id="f-titel" required value="' + esc(r.titel) + '">' +
       '<div class="rad">' +
-        '<div><label for="f-kat">Kategori</label><input type="text" id="f-kat" list="kat-alt" value="' + esc(r.kategori) + '"><datalist id="kat-alt">' + alt + "</datalist></div>" +
+        '<div><label for="f-katval">Kategori</label><select id="f-katval">' + alt + "</select>" +
+          '<input type="text" id="f-kat" class="katnyfalt" aria-label="Namn på ny kategori" placeholder="Skriv ny kategori" value="' + esc(r.kategori) + '" hidden></div>' +
         '<div><label for="f-tid">Tid</label><input type="text" id="f-tid" placeholder="t.ex. 45 min" value="' + esc(r.tid) + '"></div>' +
       "</div>" +
       '<div class="rad">' +
@@ -2199,6 +2206,12 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
       "</form>";
     $("f-titel").focus();
     renderaBildRuta(r);
+    /* kategori: välj i listan, eller välj "+ Ny kategori…" och skriv ett eget namn */
+    $("f-katval").addEventListener("change", function () {
+      var v = this.value, falt = $("f-kat");
+      if (v === "__ny__") { falt.hidden = false; falt.value = ""; falt.focus(); }
+      else { falt.hidden = true; falt.value = v; }
+    });
     $("formular").addEventListener("submit", async function (e) {
       e.preventDefault();
       var titel = $("f-titel").value.trim();
@@ -2207,7 +2220,8 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
       var ugnTemp = parseInt($("f-ugntemp").value, 10);
       if (ugnPa && !(ugnTemp > 0)) { meddela("Skriv ugnstemperaturen, eller ta bort bocken för ugn."); $("f-ugntemp").focus(); return; }
       if (!$("f-kat").value.trim() && !(await window.__fraga({ typ: "info", rubrik: "Spara utan kategori?", text: "Receptet har ingen kategori. Du kan lägga till en senare genom att ändra receptet.", ja: "Spara ändå", nej: "Välj kategori" }))) {
-        $("f-kat").focus();
+        var katFalt = $("f-kat");
+        (katFalt.hidden ? $("f-katval") : katFalt).focus();
         return;
       }
       var knapp = $("formular").querySelector('button[type="submit"]');
