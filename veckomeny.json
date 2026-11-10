@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-10T15:29:31.300Z",
+  "uppdaterad": "2026-11-10T15:29:38.648Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -252,6 +252,10 @@
       {
         "id": "emwauip6ex7we",
         "text": "Ketchup"
+      },
+      {
+        "id": "emwauiupafspi",
+        "text": "Smörgåsskinka"
       }
     ],
     "andrad": {},
