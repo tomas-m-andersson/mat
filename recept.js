@@ -225,23 +225,27 @@ window.RECEPT_DATA = {
       "id": "0e0ff294-b2b9-48ab-b7dd-96d671af076a",
       "titel": "Overnight oats",
       "kategori": "Övrigt",
-      "portioner": 4,
+      "portioner": 1,
       "tid": "",
       "kalla": "",
       "favorit": false,
       "ingredienser": [
-        "3 dl havregryn",
-        "2 krm vaniljpulver",
-        "2 dl naturell yoghurt",
-        "1 dl mjölk",
-        "1 msk honung"
+        "2 dl havregryn",
+        "1-2 krm vaniljpulver",
+        "1-2 krm kanel",
+        "3 dl mjölk och/eller havredryck",
+        "1–2 tsk honung (valfritt)"
       ],
       "steg": [
         "Blanda ihop ingredienserna.",
         "Ställ kallt några timmar, t.ex. över natten."
       ],
-      "anteckning": "Servera med frukt och/eller bär.",
-      "bild": "bilder/0e0ff294-b2b9-48ab-b7dd-96d671af076a-mv2rrgvz.jpg"
+      "anteckning": "Servera med frukt och/eller bär, eller kanske müsli",
+      "bild": "bilder/0e0ff294-b2b9-48ab-b7dd-96d671af076a-mv2rrgvz.jpg",
+      "taggar": [
+        "frukost",
+        "mellanmål"
+      ]
     },
     {
       "id": "374681f4-b3e7-4ffb-8b6b-f5e30a5f1642",
