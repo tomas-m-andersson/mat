@@ -167,6 +167,21 @@ body.harspar .app-vm main{padding-bottom:110px}
 .app-vm .dialog .knappar{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:16px}
 .app-vm .dialog .varning{background:var(--helg);color:var(--helgink);border-radius:14px;padding:10px 14px;font-weight:600}
 .app-vm .fara{color:var(--danger);font-weight:700}
+/* egen bekräftelseruta (ersätter webbläsarens confirm) */
+.app-vm .dialog.fraga{text-align:center;padding:28px 22px 20px;width:min(90vw,380px);border-radius:28px}
+.app-vm .dialog.fraga[open]{animation:fragaIn .18s ease-out}
+.app-vm .dialog.fraga[open]::backdrop{animation:fragaBg .18s ease-out}
+@keyframes fragaIn{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes fragaBg{from{opacity:0}to{opacity:1}}
+.app-vm .fraga .fikon{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:color-mix(in srgb,var(--danger) 18%,transparent);color:var(--danger)}
+.app-vm .fraga .fikon svg{width:30px;height:30px;display:block}
+.app-vm .fraga h2{font-size:1.3rem;margin:0 0 8px}
+.app-vm .fraga p{color:var(--mut);line-height:1.45;margin:0}
+.app-vm .fraga .knappar{display:flex;gap:10px;justify-content:stretch;margin-top:22px}
+.app-vm .fraga .knappar button{flex:1;padding:13px 10px;border-radius:999px;font-weight:600}
+.app-vm .fraga.info .fikon{background:color-mix(in srgb,var(--acc) 18%,transparent);color:var(--acc)}
+.app-vm .fraga .kopiaruta{display:block;width:100%;box-sizing:border-box;margin-top:14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:inherit;font-size:.95rem;text-align:left;resize:vertical}
+.app-vm .fraga .knappar .farlig{background:var(--danger);border-color:var(--danger);color:var(--card)}
 .app-vm .dialog a{color:var(--acc);font-weight:600}
 .app-rc main{max-width:640px;margin:0 auto;padding:28px 18px 110px}
 .app-rc h1{font-size:clamp(2.4rem,9vw,3.6rem);line-height:1;margin:0 0 6px;font-weight:800;letter-spacing:-.02em;color:var(--acc)}
@@ -1417,9 +1432,35 @@ function oppnaLaggTill(){
 $("shopadd").innerHTML=PLUS;$("shopback").innerHTML=BACK;
 $("shopcopy").innerHTML=COPYI;$("shopshare").innerHTML=SHARE;$("shopclear").innerHTML=MINUSBOX;$("shopclearall").innerHTML=TRASH;
 $("shopadd").onclick=oppnaLaggTill;
-$("shopclearall").onclick=()=>{
+/* egen bekräftelseruta: fraga({ikon,rubrik,text,ja,nej}) ger true eller false */
+function fraga(o){
+  return new Promise(klar=>{
+    const d=$("fragaDialog");d.textContent="";let svar=false;
+    const info=o.typ==="info";d.classList.toggle("info",info);
+    const ik=el("div","fikon");ik.innerHTML=o.ikon||(info?FRAGEIKON:TRASH);ik.setAttribute("aria-hidden","true");
+    const h=el("h2","",o.rubrik);h.id="fragaRubrik";
+    const rad=el("div","knappar");
+    const nej=dlgKnapp(o.nej||"Avbryt",()=>d.close());
+    const ja=dlgKnapp(o.ja||"OK",()=>{svar=true;d.close()});ja.className=info?"main":"farlig";
+    if(o.bara)rad.append(ja);else rad.append(nej,ja);
+    d.append(ik,h);if(o.text)d.append(el("p","",o.text));if(o.extra)d.append(o.extra);d.append(rad);
+    d.onclose=()=>{d.onclose=null;klar(svar)};
+    d.onclick=ev=>{/* tryck utanför rutan = avbryt */
+      if(ev.target!==d)return;const r=d.getBoundingClientRect();
+      if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)d.close();
+    };
+    d.showModal();(o.bara?ja:nej).focus();
+  });
+}
+window.__fraga=fraga;
+const FRAGEIKON=IC+'<circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.3-2.4 3.8"/><path d="M12 17.2h.01"/></svg>';
+const KOPIKON=IC+'<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>';
+$("shopclearall").onclick=async()=>{
   const n=shopCards().cards.length;if(!n)return;
-  if(!confirm("Tömma hela inköpslistan? "+n+" varor tas bort. Veckans varor kan skickas hit igen från veckomenyn."))return;
+  const ok=await fraga({ikon:TRASH,rubrik:"Tömma inköpslistan?",
+    text:(n===1?"1 vara":n+" varor")+" tas bort. Veckans varor kan skickas hit igen från veckomenyn.",
+    ja:"Töm listan",nej:"Avbryt"});
+  if(!ok)return;
   inkop.egna=[];inkop.andrad={};inkop.ordning=[];inkop.borta=shopItems().items.map(i=>i.key);
   checked=[];save("checked",checked);shopEdit=null;touch();renderShop();sag("Listan är tömd.");
 };
@@ -1436,7 +1477,10 @@ $("shopshare").onclick=async()=>{
     sag("Listan är kopierad. Klistra in den i ett meddelande.");
   }catch(e){
     if(e&&e.name==="AbortError")return;
-    prompt("Kopiera listan:",text);
+    const ta=el("textarea","kopiaruta");ta.value=text;ta.readOnly=true;ta.rows=Math.min(10,text.split("\n").length+1);
+    ta.setAttribute("aria-label","Inköpslistan som text");
+    fraga({typ:"info",bara:true,ikon:KOPIKON,rubrik:"Kopiera listan",text:"Håll fingret på texten, välj Markera allt och sedan Kopiera.",extra:ta,ja:"Klar"});
+    setTimeout(()=>{ta.focus();ta.select()},50);
   }
 };
 $("shopclear").onclick=()=>{checked=[];save("checked",checked);renderShop()};
@@ -2162,7 +2206,7 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
       var ugnPa = $("f-ugn").checked;
       var ugnTemp = parseInt($("f-ugntemp").value, 10);
       if (ugnPa && !(ugnTemp > 0)) { meddela("Skriv ugnstemperaturen, eller ta bort bocken för ugn."); $("f-ugntemp").focus(); return; }
-      if (!$("f-kat").value.trim() && !confirm("Receptet har ingen kategori. Vill du spara det ändå?")) {
+      if (!$("f-kat").value.trim() && !(await window.__fraga({ typ: "info", rubrik: "Spara utan kategori?", text: "Receptet har ingen kategori. Du kan lägga till en senare genom att ändra receptet.", ja: "Spara ändå", nej: "Välj kategori" }))) {
         $("f-kat").focus();
         return;
       }
@@ -2249,11 +2293,11 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
     sparaTillFil();
     meddela('Kategorin heter nu "' + n + '".');
   }
-  function kategoriRadera(i) {
+  async function kategoriRadera(i) {
     var k = kategorier()[i];
     var n = antalIKat(k);
-    var fraga = 'Ta bort kategorin "' + k + '"?' + (n ? " " + n + " recept blir utan kategori." : "");
-    if (!confirm(fraga)) return;
+    var ok = await window.__fraga({ rubrik: 'Ta bort kategorin "' + k + '"?', text: n ? n + " recept blir utan kategori. Själva recepten finns kvar." : "Inga recept ligger i kategorin.", ja: "Ta bort", nej: "Avbryt" });
+    if (!ok) return;
     data.recept.forEach(function (r) { if (r.kategori === k) r.kategori = ""; });
     data.kategorier = kategorier().filter(function (x) { return x !== k; });
     if (filter.kat === k) filter.kat = "Alla";
@@ -2644,14 +2688,15 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
         if ((visaPortioner || r.portioner) > 1) { visaPortioner = (visaPortioner || r.portioner) - 1; renderaVy(); }
         break;
       case "radera":
-        if (confirm('Ta bort "' + r.titel + '"? Det går inte att ångra.')) {
+        window.__fraga({ rubrik: 'Ta bort "' + r.titel + '"?', text: "Det går inte att ångra.", ja: "Ta bort", nej: "Avbryt" }).then(function (ok) {
+          if (!ok) return;
           var raderadBild = r.bild;
           data.recept = data.recept.filter(function (x) { return x.id !== r.id; });
           valtId = null;
           renderaVy();
           sparaTillFil().then(function () { taBortBildFil(raderadBild); });
           meddela("Receptet är borttaget.");
-        }
+        });
         break;
     }
   });
@@ -2936,5 +2981,6 @@ window.__vm={lasState:()=>({week:week,locks:locks,kort:shopCards().cards.map(c=>
   visa(lasHash());
 })();
 </script>
+<div class="app-vm"><dialog id="fragaDialog" class="dialog fraga" aria-labelledby="fragaRubrik"></dialog></div>
 </body>
 </html>
