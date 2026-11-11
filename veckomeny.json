@@ -1,11 +1,11 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-11T19:53:20.991Z",
+  "uppdaterad": "2026-11-11T19:53:29.152Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
     "Chicken nuggets med pommes eller ris",
-    "Korvstroganoff med pasta eller ris",
+    "Rester",
     "Köttbullar med potatismos och gräddsås",
     "Pizza",
     "Korv med bröd"
@@ -14,7 +14,7 @@
     true,
     true,
     true,
-    false,
+    true,
     true,
     true,
     true
