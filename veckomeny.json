@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-11T19:53:29.152Z",
+  "uppdaterad": "2026-11-13T09:41:11.813Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -196,7 +196,16 @@
     ]
   },
   "inkop": {
-    "egna": [],
+    "egna": [
+      {
+        "id": "emwese96ixy3k",
+        "text": "Leverpastej"
+      },
+      {
+        "id": "emweseb5seg9s",
+        "text": "Mjölk"
+      }
+    ],
     "andrad": {},
     "borta": [
       "pkt|bacon",
