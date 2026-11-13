@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-13T09:41:16.818Z",
+  "uppdaterad": "2026-11-13T10:40:09.803Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -208,6 +208,10 @@
       {
         "id": "emweseen7y0wa",
         "text": "Filmjölk"
+      },
+      {
+        "id": "emweui50vhdzs",
+        "text": "Glass"
       }
     ],
     "andrad": {},
