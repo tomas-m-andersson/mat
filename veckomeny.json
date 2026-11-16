@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-13T10:41:26.477Z",
+  "uppdaterad": "2026-11-16T16:39:31.763Z",
   "vecka": [
     "Tjockpannkaka med bacon",
     "Falukorv med makaroner/stuvade makaroner",
@@ -11,13 +11,13 @@
     "Korv med bröd"
   ],
   "las": [
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
   ],
   "ratter": {
     "vardag": [
