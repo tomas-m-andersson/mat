@@ -1,19 +1,19 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-16T16:40:12.505Z",
+  "uppdaterad": "2026-11-16T16:40:29.928Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
-    "Chicken nuggets med pommes eller ris",
-    "Korv med bröd",
+    "Fiskpinnar med potatis/potatismos",
+    "Lax med potatis",
     "Pannbiff med potatis och stekt lök",
     "Våfflor",
     "Pannkakor"
   ],
   "las": [
     true,
-    false,
-    false,
+    true,
+    true,
     false,
     false,
     false,
