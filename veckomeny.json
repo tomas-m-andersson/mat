@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-16T16:42:44.641Z",
+  "uppdaterad": "2026-11-16T16:43:16.375Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -8,7 +8,7 @@
     "Lax med potatis",
     "Hemgjord pizza",
     "Våfflor",
-    "Köttfärslimpa med potatis och sås"
+    "Köttfärssås och spaghetti"
   ],
   "las": [
     true,
@@ -17,7 +17,7 @@
     true,
     true,
     true,
-    false
+    true
   ],
   "ratter": {
     "vardag": [
