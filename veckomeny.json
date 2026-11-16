@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-16T16:47:58.122Z",
+  "uppdaterad": "2026-11-16T16:59:36.281Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -240,6 +240,10 @@
       {
         "id": "emwjhyp54l4ib",
         "text": "Torrfoder katt"
+      },
+      {
+        "id": "emwjidnxh591d",
+        "text": "Ica kattmat"
       }
     ],
     "andrad": {},
