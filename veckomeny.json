@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-16T16:59:36.281Z",
+  "uppdaterad": "2026-11-17T15:35:20.962Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -244,6 +244,14 @@
       {
         "id": "emwjidnxh591d",
         "text": "Ica kattmat"
+      },
+      {
+        "id": "emwkut5r0esg3",
+        "text": "Saftsoppa"
+      },
+      {
+        "id": "emwkut85k36u7",
+        "text": "Isglass"
       }
     ],
     "andrad": {},
