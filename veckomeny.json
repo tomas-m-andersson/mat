@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-17T15:37:53.186Z",
+  "uppdaterad": "2026-11-18T10:12:31.552Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -196,84 +196,28 @@
     ]
   },
   "inkop": {
-    "egna": [
-      {
-        "id": "emwese96ixy3k",
-        "text": "Leverpastej"
-      },
-      {
-        "id": "emweseb5seg9s",
-        "text": "Mjölk"
-      },
-      {
-        "id": "emwjhw2mr4vud",
-        "text": "1-2 pizzakit"
-      },
-      {
-        "id": "emwjhw2mrhmyt",
-        "text": "250 g bacon"
-      },
-      {
-        "id": "emwjhw2msnnr3",
-        "text": "500 g blodpudding"
-      },
-      {
-        "id": "emwjhw2msnu2a",
-        "text": "2 dl crème fraiche"
-      },
-      {
-        "id": "emwjhw2msv8g0",
-        "text": "600 g fiskpinnar"
-      },
-      {
-        "id": "emwjhw2msp9uh",
-        "text": "Remuladsås"
-      },
-      {
-        "id": "emwjhw2msuvb2",
-        "text": "180 g strimlad skinka"
-      },
-      {
-        "id": "emwjhw2msft78",
-        "text": "2 dl vispgrädde"
-      },
-      {
-        "id": "emwjhyp54l4ib",
-        "text": "Torrfoder katt"
-      },
-      {
-        "id": "emwjidnxh591d",
-        "text": "Ica kattmat"
-      },
-      {
-        "id": "emwkut5r0esg3",
-        "text": "Saftsoppa"
-      },
-      {
-        "id": "emwkut85k36u7",
-        "text": "Isglass"
-      }
-    ],
+    "egna": [],
     "andrad": {},
     "borta": [
-      "|buljongtärning",
-      "|gul lök",
-      "|gurka",
-      "|icas sötsura sås",
-      "|ketchup",
-      "|korv",
-      "|korvbröd",
-      "m|kycklingnuggets",
-      "|köttbullar",
+      "|1-2 pizzakit",
+      "m|bacon",
+      "m|blodpudding",
+      "|citron",
+      "v|crème fraiche",
+      "m|fiskpinnar",
+      "m|frysta ärtor",
+      "m|laxfilé",
       "|lingonsylt",
-      "v|matlagningsgrädde",
       "v|mjölk",
-      "m|pommes frites",
+      "m|potatis",
       "m|potatis eller pulvermos",
-      "v|ris",
-      "|rostad lök",
-      "|senap",
+      "|remuladsås",
+      "m|riven ost",
+      "m|smör",
+      "m|strimlad skinka",
+      "|sylt",
       "v|vetemjöl",
+      "v|vispgrädde",
       "|ägg"
     ],
     "ordning": []
