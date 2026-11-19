@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-18T10:12:31.552Z",
+  "uppdaterad": "2026-11-19T15:59:29.119Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -196,7 +196,12 @@
     ]
   },
   "inkop": {
-    "egna": [],
+    "egna": [
+      {
+        "id": "emwnqjwllwidg",
+        "text": "Bakplåtspapper"
+      }
+    ],
     "andrad": {},
     "borta": [
       "|1-2 pizzakit",
