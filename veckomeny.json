@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-23T15:46:08.874Z",
+  "uppdaterad": "2026-11-23T15:48:26.078Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -196,7 +196,104 @@
     ]
   },
   "inkop": {
-    "egna": [],
+    "egna": [
+      {
+        "id": "emwtfx3j826rz",
+        "text": "2 dl crème fraiche"
+      },
+      {
+        "id": "emwtfx3j8e8i6",
+        "text": "600 g falukorv"
+      },
+      {
+        "id": "emwtfx3j8xodr",
+        "text": "4 gul lök"
+      },
+      {
+        "id": "emwtfx3j8q6ib",
+        "text": "2 gurka"
+      },
+      {
+        "id": "emwtfx3j80ypj",
+        "text": "2 pkt krossade tomater"
+      },
+      {
+        "id": "emwtfx3j805a8",
+        "text": "600 g kycklingnuggets"
+      },
+      {
+        "id": "emwtfx3j8bhj0",
+        "text": "Köttbullar"
+      },
+      {
+        "id": "emwtfx3j88uw7",
+        "text": "1,5 kg köttfärs"
+      },
+      {
+        "id": "emwtfx3j84uvg",
+        "text": "1 burk majs"
+      },
+      {
+        "id": "emwtfx3j8jj3a",
+        "text": "300 g makaroner"
+      },
+      {
+        "id": "emwtfx3j8uen0",
+        "text": "2 dl matlagningsgrädde"
+      },
+      {
+        "id": "emwtfx3j8wg1q",
+        "text": "1 förp mjuka tacobröd"
+      },
+      {
+        "id": "emwtfx3j9ved7",
+        "text": "1,2 l mjölk"
+      },
+      {
+        "id": "emwtfx3j9iaa9",
+        "text": "1 paprika"
+      },
+      {
+        "id": "emwtfx3j9n1g1",
+        "text": "800 g pommes frites"
+      },
+      {
+        "id": "emwtfx3j9b2ki",
+        "text": "3 dl ris"
+      },
+      {
+        "id": "emwtfx3j9ooun",
+        "text": "150 g riven ost"
+      },
+      {
+        "id": "emwtfx3j9ndjb",
+        "text": "1 burk salsa"
+      },
+      {
+        "id": "emwtfx3j9epj7",
+        "text": "100 g smör"
+      },
+      {
+        "id": "emwtfx3j92p98",
+        "text": "1 förp tacokrydda"
+      },
+      {
+        "id": "emwtfx3j9ol5n",
+        "text": "1 förp tacoskal"
+      },
+      {
+        "id": "emwtfx3j98ze2",
+        "text": "3 tomat"
+      },
+      {
+        "id": "emwtfx3j92ymf",
+        "text": "2 dl vispgrädde"
+      },
+      {
+        "id": "emwtfx3j9zyl4",
+        "text": "3 ägg"
+      }
+    ],
     "andrad": {},
     "borta": [
       "v|crème fraiche",
