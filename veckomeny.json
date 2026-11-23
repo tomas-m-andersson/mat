@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-23T15:45:04.471Z",
+  "uppdaterad": "2026-11-23T15:45:33.144Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -15,9 +15,9 @@
     true,
     true,
     true,
+    true,
     false,
-    false,
-    false
+    true
   ],
   "ratter": {
     "vardag": [
