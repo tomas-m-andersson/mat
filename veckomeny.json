@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-23T15:44:33.430Z",
+  "uppdaterad": "2026-11-23T15:44:43.779Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -13,8 +13,8 @@
   "las": [
     false,
     true,
-    false,
-    false,
+    true,
+    true,
     false,
     false,
     false
