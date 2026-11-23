@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-20T07:37:19.515Z",
+  "uppdaterad": "2026-11-23T15:44:14.076Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -11,9 +11,9 @@
     "Köttfärssås och spaghetti"
   ],
   "las": [
-    true,
-    true,
-    true,
+    false,
+    false,
+    false,
     true,
     true,
     true,
