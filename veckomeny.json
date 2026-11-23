@@ -1,10 +1,10 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-23T15:44:25.860Z",
+  "uppdaterad": "2026-11-23T15:44:33.430Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
-    "Korv med bröd",
+    "Falukorv med makaroner/stuvade makaroner",
     "Köttbullar med potatismos och gräddsås",
     "Köttfärslimpa med potatis och sås",
     "Tacos",
@@ -12,7 +12,7 @@
   ],
   "las": [
     false,
-    false,
+    true,
     false,
     false,
     false,
