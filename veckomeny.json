@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-23T15:44:14.076Z",
+  "uppdaterad": "2026-11-23T15:44:20.418Z",
   "vecka": [
     "Korv och makaroner",
     "Blodpudding med bacon och stekt ägg",
@@ -14,10 +14,10 @@
     false,
     false,
     false,
-    true,
-    true,
-    true,
-    true
+    false,
+    false,
+    false,
+    false
   ],
   "ratter": {
     "vardag": [
