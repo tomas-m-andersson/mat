@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-24T06:44:46.915Z",
+  "uppdaterad": "2026-11-24T06:44:53.963Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -300,6 +300,10 @@
       {
         "id": "emwubxt50wbxq",
         "text": "2 liter mjölk"
+      },
+      {
+        "id": "emwubxym4hl2r",
+        "text": "Leverpastej"
       }
     ],
     "andrad": {},
