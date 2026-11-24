@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-24T06:44:53.963Z",
+  "uppdaterad": "2026-11-24T06:45:01.561Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -304,6 +304,10 @@
       {
         "id": "emwubxym4hl2r",
         "text": "Leverpastej"
+      },
+      {
+        "id": "emwuby4ftcaf8",
+        "text": "Toapapper"
       }
     ],
     "andrad": {},
