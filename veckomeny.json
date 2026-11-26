@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-26T11:47:27.950Z",
+  "uppdaterad": "2026-11-26T11:47:38.035Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -216,6 +216,14 @@
       {
         "id": "emwxhmrh560sx",
         "text": "Spade"
+      },
+      {
+        "id": "emwxhmw35zyks",
+        "text": "Pepparkaksdeg"
+      },
+      {
+        "id": "emwxhmxd0f1n8",
+        "text": "Smör"
       }
     ],
     "andrad": {},
