@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-25T16:58:17.260Z",
+  "uppdaterad": "2026-11-26T11:03:44.579Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -196,166 +196,47 @@
     ]
   },
   "inkop": {
-    "egna": [
-      {
-        "id": "emwtfx3j826rz",
-        "text": "2 dl crème fraiche"
-      },
-      {
-        "id": "emwtfx3j8e8i6",
-        "text": "600 g falukorv"
-      },
-      {
-        "id": "emwtfx3j8xodr",
-        "text": "4 gul lök"
-      },
-      {
-        "id": "emwtfx3j8q6ib",
-        "text": "2 gurka"
-      },
-      {
-        "id": "emwtfx3j80ypj",
-        "text": "2 pkt krossade tomater"
-      },
-      {
-        "id": "emwtfx3j805a8",
-        "text": "600 g kycklingnuggets"
-      },
-      {
-        "id": "emwtfx3j8bhj0",
-        "text": "Köttbullar"
-      },
-      {
-        "id": "emwtfx3j88uw7",
-        "text": "1,5 kg köttfärs"
-      },
-      {
-        "id": "emwtfx3j84uvg",
-        "text": "1 burk majs"
-      },
-      {
-        "id": "emwtfx3j8jj3a",
-        "text": "300 g makaroner"
-      },
-      {
-        "id": "emwtfx3j8uen0",
-        "text": "2 dl matlagningsgrädde"
-      },
-      {
-        "id": "emwtfx3j8wg1q",
-        "text": "1 förp mjuka tacobröd"
-      },
-      {
-        "id": "emwtfx3j9ved7",
-        "text": "1,2 l mjölk"
-      },
-      {
-        "id": "emwtfx3j9iaa9",
-        "text": "1 paprika"
-      },
-      {
-        "id": "emwtfx3j9n1g1",
-        "text": "800 g pommes frites"
-      },
-      {
-        "id": "emwtfx3j9b2ki",
-        "text": "3 dl ris"
-      },
-      {
-        "id": "emwtfx3j9ooun",
-        "text": "150 g riven ost"
-      },
-      {
-        "id": "emwtfx3j9ndjb",
-        "text": "1 burk salsa"
-      },
-      {
-        "id": "emwtfx3j9epj7",
-        "text": "100 g smör"
-      },
-      {
-        "id": "emwtfx3j92p98",
-        "text": "1 förp tacokrydda"
-      },
-      {
-        "id": "emwtfx3j9ol5n",
-        "text": "1 förp tacoskal"
-      },
-      {
-        "id": "emwtfx3j98ze2",
-        "text": "3 tomat"
-      },
-      {
-        "id": "emwtfx3j92ymf",
-        "text": "2 dl vispgrädde"
-      },
-      {
-        "id": "emwtfx3j9zyl4",
-        "text": "3 ägg"
-      },
-      {
-        "id": "emwtfxckusfb4",
-        "text": "Skqgenröra"
-      },
-      {
-        "id": "emwubxt50wbxq",
-        "text": "2 liter mjölk"
-      },
-      {
-        "id": "emwubxym4hl2r",
-        "text": "Leverpastej"
-      },
-      {
-        "id": "emwuby4ftcaf8",
-        "text": "Toapapper"
-      },
-      {
-        "id": "emwwdamrq7rjo",
-        "text": "Kattmat"
-      }
-    ],
+    "egna": [],
     "andrad": {},
     "borta": [
+      "|buljongtärning",
       "v|crème fraiche",
+      "m|falukorv",
+      "|gul lök",
+      "|gurka",
+      "|icas sötsura sås",
+      "|ketchup",
+      "pkt|krossade tomater",
+      "m|kycklingnuggets",
+      "|köttbuljongtärning",
+      "|köttbullar",
+      "m|köttfärs",
       "|lingonsylt",
+      "burk|majs",
+      "m|makaroner",
+      "v|matlagningsgrädde",
+      "förp|mjuka tacobröd",
       "v|mjölk",
+      "|paprika",
+      "m|pommes frites",
+      "m|potatis",
       "m|potatis eller pulvermos",
+      "v|ris",
       "m|riven ost",
+      "burk|salsa",
+      "|salta jordnötter",
       "m|smör",
+      "msk|smör",
+      "m|spaghetti",
+      "v|ströbröd",
       "|sylt",
+      "förp|tacokrydda",
+      "förp|tacoskal",
+      "|tomat",
       "v|vetemjöl",
       "v|vispgrädde",
       "|ägg"
     ],
-    "ordning": [
-      "emwtfx3j826rz",
-      "emwtfx3j8e8i6",
-      "emwtfx3j80ypj",
-      "emwtfx3j805a8",
-      "emwtfx3j8bhj0",
-      "emwtfx3j88uw7",
-      "emwtfx3j84uvg",
-      "emwtfx3j8jj3a",
-      "emwtfx3j8uen0",
-      "emwtfx3j8wg1q",
-      "emwtfx3j9iaa9",
-      "emwtfx3j9ved7",
-      "emwtfx3j9n1g1",
-      "emwtfx3j9b2ki",
-      "emwtfx3j9ooun",
-      "emwtfx3j9ndjb",
-      "emwtfx3j9epj7",
-      "emwtfx3j92p98",
-      "emwtfx3j9ol5n",
-      "emwtfx3j98ze2",
-      "emwtfx3j92ymf",
-      "emwtfx3j9zyl4",
-      "emwtfxckusfb4",
-      "emwubxt50wbxq",
-      "emwubxym4hl2r",
-      "emwuby4ftcaf8",
-      "emwtfx3j8xodr",
-      "emwtfx3j8q6ib"
-    ]
+    "ordning": []
   }
 }
