@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-26T11:03:44.579Z",
+  "uppdaterad": "2026-11-26T11:03:52.070Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -196,7 +196,12 @@
     ]
   },
   "inkop": {
-    "egna": [],
+    "egna": [
+      {
+        "id": "emwxg2p85nhf8",
+        "text": "Smörgåsskinka"
+      }
+    ],
     "andrad": {},
     "borta": [
       "|buljongtärning",
