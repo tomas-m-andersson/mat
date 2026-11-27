@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "uppdaterad": "2026-11-27T22:33:30.146Z",
+  "uppdaterad": "2026-11-27T22:33:34.964Z",
   "vecka": [
     "Köttfärssås med spaghetti",
     "Chicken nuggets med pommes eller ris",
@@ -240,6 +240,10 @@
       {
         "id": "emwzk5fbg43p8",
         "text": "Röd lök"
+      },
+      {
+        "id": "emwzk5imw7gc5",
+        "text": "Citron"
       }
     ],
     "andrad": {},
